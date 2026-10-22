@@ -24,9 +24,9 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await axios.post(
-      "https://lambent-dolphin-80bfb5.netlify.app/api/contact",
-      form
-    );
+  "https://advisor-group-company-1.onrender.com/api/contact",
+  form
+);
 
     console.log(response.data);
 
