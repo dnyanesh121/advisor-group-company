@@ -13,12 +13,12 @@ export default function ContactUs({ onSubmit }) {
   const handleChange = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setSending(true);
-  //   try {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    try {
       // 👇 yahan apni API call lagao (ya parent se onSubmit prop pass karo)
-const handleSubmit = async (e) => {
+      const handleSubmit = async (e) => {
   e.preventDefault();
   setSending(true);
 
@@ -42,6 +42,12 @@ const handleSubmit = async (e) => {
     setSending(false);
   }
 };
+
+      setForm(INITIAL);
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <section className="contact">
