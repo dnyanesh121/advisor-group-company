@@ -1,0 +1,243 @@
+/* ===== Mutual Fund Returns Calculator ===== */
+.rc {
+  background: #f6f7f9;
+  padding: 36px 24px 56px;
+}
+
+.rc__heading {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.rc__heading span {
+  color: var(--brand-red, #d93a25);
+}
+
+.rc__card {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14), 0 3px 0 #c5d2ea;
+}
+
+/* ---------- Left ---------- */
+.rc__left {
+  padding: 40px 42px 30px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rc-tabs {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-bottom: 26px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #dde8f8;
+}
+
+.rc-tabs button {
+  border: 0;
+  padding: 14px 28px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--brand-navy, #0b3a8a);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.rc-tabs button.is-active {
+  color: #fff;
+  background: var(--brand-navy, #0b3a8a);
+  border-radius: 6px;
+}
+
+.rc-tabs button:focus-visible {
+  outline: 2px solid var(--brand-red, #d93a25);
+  outline-offset: -2px;
+}
+
+/* ---------- Slider ---------- */
+.rc-slider {
+  margin-bottom: 22px;
+}
+
+.rc-slider__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 6px;
+}
+
+.rc-slider__top label {
+  font-size: 14px;
+  color: #444;
+}
+
+.rc-slider__top output {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.rc-slider input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 12px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* track (filled part via --pct) */
+.rc-slider input[type='range']::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(
+    to right,
+    var(--brand-navy, #0b3a8a) var(--pct),
+    #d9dce1 var(--pct)
+  );
+}
+.rc-slider input[type='range']::-moz-range-track {
+  height: 3px;
+  border-radius: 3px;
+  background: #d9dce1;
+}
+.rc-slider input[type='range']::-moz-range-progress {
+  height: 3px;
+  border-radius: 3px;
+  background: var(--brand-navy, #0b3a8a);
+}
+
+/* thumb */
+.rc-slider input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+  margin-top: -2.5px;
+  border-radius: 50%;
+  background: var(--brand-navy, #0b3a8a);
+  border: 0;
+  transition: transform 0.15s;
+}
+.rc-slider input[type='range']::-moz-range-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-navy, #0b3a8a);
+  border: 0;
+}
+.rc-slider input[type='range']:hover::-webkit-slider-thumb,
+.rc-slider input[type='range']:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.8);
+}
+.rc-slider input[type='range']:focus-visible {
+  outline: none;
+}
+
+.rc__note {
+  margin: auto 0 0;
+  padding-top: 40px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ---------- Right ---------- */
+.rc__right {
+  padding: 26px 34px 24px 24px;
+  background: #ecf3fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rc-donut {
+  width: min(100%, 200px);
+  height: auto;
+  margin-bottom: 26px;
+}
+
+.rc-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.rc-legend li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.rc-legend li + li:not(.rc-legend__total) {
+  border-top: 1px solid #9aa3b2;
+}
+
+.rc-legend__dot {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  margin-right: 12px;
+  border-radius: 2px;
+}
+.rc-legend__dot--navy { background: var(--brand-navy, #0b3a8a); }
+.rc-legend__dot--red  { background: var(--brand-red, #d93a25); }
+
+.rc-legend__name { flex: 1; }
+
+.rc-legend__val {
+  font-weight: 600;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.rc-legend__total {
+  margin-top: 2px;
+  padding-top: 8px !important;
+  border-top: 1px solid #9aa3b2;
+}
+
+.rc-legend__total .rc-legend__name,
+.rc-legend__total .rc-legend__val {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 800px) {
+  .rc__card {
+    grid-template-columns: 1fr;
+  }
+  .rc__left {
+    padding: 28px 22px 24px;
+  }
+  .rc__note {
+    padding-top: 12px;
+  }
+  .rc__right {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .rc-tabs button {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}

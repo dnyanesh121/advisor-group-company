@@ -1,0 +1,47 @@
+.insurance-page {
+  width: 100%;
+  background: #f7f9fa;
+}
+
+.insurance-hero {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  padding: 40px 4%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.78) 42%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    url('../assets/insurance-banner.jpg') center / cover no-repeat;
+}
+
+.insurance-hero__content {
+  max-width: 560px;
+}
+
+.insurance-hero h1 {
+  margin: 0;
+  color: #12477d;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.insurance-hero h1 span {
+  color: #d84325;
+}
+
+@media (max-width: 600px) {
+  .insurance-hero {
+    min-height: 210px;
+    padding: 28px 20px;
+    background-position: center;
+  }
+
+  .insurance-hero h1 {
+    font-size: 24px;
+  }
+}

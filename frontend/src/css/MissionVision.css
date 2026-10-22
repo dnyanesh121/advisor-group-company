@@ -1,0 +1,84 @@
+.mvv {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+}
+
+.mvv__title {
+  text-align: center;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+
+.mvv__title span { color: var(--brand-navy); }
+.mvv__title em   { color: var(--brand-red); font-style: normal; font-weight: 700; }
+
+.mvv__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.mvv-card {
+  display: flex;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(10, 58, 138, 0.15);
+  overflow: hidden;
+  min-height: 150px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.mvv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(10, 58, 138, 0.22);
+}
+
+/* Left colored strip with icon */
+.mvv-card__side {
+  flex: 0 0 64px;
+  display: grid;
+  place-items: center;
+}
+
+.mvv-card__side--blue {
+  background: linear-gradient(180deg, #0a3a8a 0%, #0b5fb0 55%, #0b86c9 100%);
+}
+
+.mvv-card__side--orange {
+  background: linear-gradient(180deg, #d93a12 0%, #ec5522 55%, #f66a30 100%);
+}
+
+.mvv-card__body {
+  padding: 16px 18px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.mvv-card__body h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 6px;
+}
+
+/* 4 line ke baad "..." */
+.mvv-card__body p {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #222;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 960px) {
+  .mvv__grid { grid-template-columns: 1fr; gap: 20px; }
+  .mvv-card__body p { -webkit-line-clamp: 5; line-clamp: 5; }
+}

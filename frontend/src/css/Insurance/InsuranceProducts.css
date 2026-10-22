@@ -1,0 +1,92 @@
+/* "Insurance Products": label on the left, illustration on the right, small arrow bottom-right */
+.ip-section {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+}
+
+.ip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ip-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 112px;
+  padding: 18px 30px 18px 26px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(10, 58, 138, 0.16);
+  color: #1b1b1b;
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.ip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(10, 58, 138, 0.22);
+}
+
+.ip-card:focus-visible {
+  outline: 2px solid var(--navy, var(--brand-navy, #0a3a8a));
+  outline-offset: 3px;
+}
+
+.ip-card__title {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.ip-card__img {
+  width: 96px;
+  height: 84px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.ip-card__emoji {
+  width: 96px;
+  text-align: center;
+  font-size: 46px;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.ip-card__go {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #d9e6f8;
+  color: var(--navy, var(--brand-navy, #0a3a8a));
+  display: grid;
+  place-items: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.ip-card:hover .ip-card__go {
+  background: var(--navy, var(--brand-navy, #0a3a8a));
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .ip-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+}
+
+@media (max-width: 520px) {
+  .ip-grid { grid-template-columns: 1fr; }
+  .ip-card { min-height: 96px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ip-card:hover { transform: none; }
+}

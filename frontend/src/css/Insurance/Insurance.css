@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --ins-navy: #0b3a8a;
+  --ins-red: #d93a0f;
+  --ins-bg: #f6f7f9;
+  --ins-arrow: #6fa8dc;
+}
+
+.ins-hero,
+.ins-products {
+  font-family: "Poppins", sans-serif;
+}
+
+.ins-accent {
+  color: var(--ins-red);
+}
+
+/* ---------- Products ---------- */
+/* ===== Insurance Products section ===== */
+.ins-products {
+  background: #f6f7f9;
+  padding: 36px 24px 48px;
+}
+
+.ins-products__heading {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: clamp(24px, 2.4vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.ins-products__heading span {
+  color: var(--brand-red, #d93a0f);
+}
+
+.ins-products__grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 28px;
+}
+
+.ins-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+  padding: 0 14px 0 14px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+  text-decoration: none;
+  color: #111;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.ins-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
+}
+
+.ins-card:focus-visible {
+  outline: 2px solid var(--brand-navy, #0b3a8a);
+  outline-offset: 2px;
+}
+
+.ins-card__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ins-card__icon {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  margin-right: 6px;
+}
+
+.ins-card__arrow {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #dbe6f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .ins-products__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .ins-products {
+    padding: 28px 16px 36px;
+  }
+  .ins-products__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,84 @@
+/* ===== Our Partners ===== */
+.partners {
+  background: #f6f7f9;
+  padding: 36px 0 48px;
+}
+
+.partners__heading {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: clamp(24px, 2.4vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.partners__heading span {
+  color: var(--brand-red, #d93a0f);
+}
+
+.partners__viewport {
+  overflow: hidden;
+  width: 100%;
+  /* shadow cut na ho isliye thoda vertical padding */
+  padding: 8px 0 14px;
+}
+
+.partners__track {
+  display: flex;
+  width: max-content;
+  animation: partners-scroll var(--duration, 30s) linear infinite;
+}
+
+/* hover par ruk jaye */
+.partners__viewport:hover .partners__track {
+  animation-play-state: paused;
+}
+
+/* gap ki jagah padding, taaki -50% par loop bilkul seamless rahe */
+.partners__item {
+  flex: 0 0 auto;
+  padding-right: 28px;
+}
+
+.partners__card {
+  width: 180px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  padding: 8px 14px;
+}
+
+.partners__card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes partners-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 560px) {
+  .partners__card {
+    width: 150px;
+    height: 64px;
+  }
+  .partners__item {
+    padding-right: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners__track {
+    animation: none;
+  }
+  .partners__viewport {
+    overflow-x: auto;
+  }
+}

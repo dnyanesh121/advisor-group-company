@@ -1,0 +1,103 @@
+/* ===== Invest in Mutual Funds ===== */
+.mf {
+  background: #f6f7f9;
+  padding: 36px 24px 48px;
+}
+
+.mf__heading {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: clamp(24px, 2.4vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.mf__heading span {
+  color: var(--brand-red, #d93a0f);
+}
+
+.mf__grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  /* 3 cards; zyada add karoge to apne aap neeche wrap honge */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+.mf-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 156px;
+  padding: 18px 20px 18px 16px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.mf-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.mf-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.mf-card__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+}
+
+.mf-card__title span {
+  display: block;
+}
+
+.mf-card__btn {
+  display: inline-block;
+  padding: 7px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  background: var(--brand-navy, #0b3a8a);
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(11, 58, 138, 0.3);
+  transition: filter 0.2s;
+}
+
+.mf-card__btn:hover {
+  filter: brightness(1.15);
+}
+
+.mf-card__btn:focus-visible {
+  outline: 2px solid var(--brand-red, #d93a0f);
+  outline-offset: 2px;
+}
+
+.mf-card__icon {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+@media (max-width: 560px) {
+  .mf {
+    padding: 28px 16px 36px;
+  }
+  .mf__grid {
+    grid-template-columns: 1fr;
+  }
+}

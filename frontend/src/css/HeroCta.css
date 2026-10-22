@@ -1,0 +1,49 @@
+/* ===== Hero: heading ke NICHE button ===== */
+
+/* .hero__content ko column bana diya: jo bhi andar hoga (h1, phir button) upar-neeche aayega.
+   Specificity .hero .hero__content rakhi hai taaki HeroSlider.css se na dabe. */
+.hero .hero__content {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero .hero__content h1 {
+  margin: 0;
+}
+
+.hero__btn {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 22px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  text-decoration: none;
+  background: var(--brand-red, #e63b0e);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.hero__btn:hover {
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+}
+
+.hero__btn:focus-visible {
+  outline: 2px solid var(--brand-navy, #0b3a8a);
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  /* mobile par content upar se start (pehle align-items:flex-start tha, ab column hai to justify-content) */
+  .hero .hero__content {
+    justify-content: flex-start;
+  }
+  .hero__btn {
+    margin-top: 16px;
+  }
+}
