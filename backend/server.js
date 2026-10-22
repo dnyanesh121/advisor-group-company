@@ -48,6 +48,16 @@ app.listen(5000, () => {
   );
 });
 
-app.get("/", (req, res) => {
-  res.send("Backend Running");
+app.get("/api/contact", async (req, res) => {
+  try {
+    const leads = await Contact.find()
+      .sort({ createdAt: -1 });
+
+    res.json(leads);
+
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
 });

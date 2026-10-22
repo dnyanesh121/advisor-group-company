@@ -10,23 +10,22 @@ export default function ContactUs({ onSubmit }) {
   const [form, setForm] = useState(INITIAL);
   const [sending, setSending] = useState(false);
 
-  const handleChange = (e) =>
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+const handleChange = (e) =>
+  setForm((f) => ({
+    ...f,
+    [e.target.name]: e.target.value,
+  }));
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSending(true);
-    try {
-      // 👇 yahan apni API call lagao (ya parent se onSubmit prop pass karo)
-      const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
+
   setSending(true);
 
   try {
     const response = await axios.post(
-  "https://advisor-group-company-1.onrender.com/api/contact",
-  form
-);
+      "https://advisor-group-company-1.onrender.com/api/contact",
+      form
+    );
 
     console.log(response.data);
 
@@ -42,12 +41,6 @@ export default function ContactUs({ onSubmit }) {
     setSending(false);
   }
 };
-
-      setForm(INITIAL);
-    } finally {
-      setSending(false);
-    }
-  };
 
   return (
     <section className="contact">
