@@ -1,9 +1,9 @@
 // Slide images: apni banner images (bina text wali) src/assets/ me rakho
-import MutualFundImg from '../assets/mutualfunds.png';
-import InsuranceImg from "../assets/insurance.png";
-import LoansImg from "../assets/loan.png";
+import MutualFundImg from '../assets/MutualFunds.png';
+import InsuranceImg from "../assets/Insurance.png";
+import LoansImg from "../assets/Loan.png";
 import RealEstateImg from "../assets/RealEstate.png";
-import WebDigitalImg from "../assets/webdigital.png";
+import WebDigitalImg from "../assets/WebDigital.png";
 
 const slides = [
   {
