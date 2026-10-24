@@ -2,13 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import '../css/Navbar.css';
 import logo from '../assets/logonew.png';
 import { BUSINESSES } from '../js/Site';
-import { NavLink, useLocation } from 'react-router-dom';
+import { href, NavLink, useLocation } from 'react-router-dom';
 
 const links = [
   { label: 'Home', href: '/' },
-  { label: 'Our Partners', href: '#partners' },
-  { label: 'Blogs & Media', href: '#blogs' },
-  { label: 'Offices', href: '#offices' },
+  { label: 'Events & News', href: '/event-news' },
+  { label: 'Blogs & Media', href: '/blog-media' },
+  { label: 'Career', href: '/career' },
+  {label: 'Contact Us', href: '/contact-us'},
 ]
 
 export default function Navbar() {
@@ -21,12 +22,9 @@ export default function Navbar() {
 
   // Active underline URL se decide hoti hai (taaki Insurance page par Home pe red line na aaye)
   const isBusinessPage = BUSINESSES.some((b) => pathname.startsWith(b.path));
-  const isActive = (label) => {
-    if (label === 'Home') {
-      return pathname === '/' && (active === null || active === 'Home');
-    }
-    return active === label;
-  };
+  const isActive = (href) => {
+  return pathname === href;
+};
 
   // Scroll karte hi navbar ko white background + shadow do
   useEffect(() => {
@@ -90,7 +88,7 @@ export default function Navbar() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className={isActive(link.label) ? 'active' : ''}
+                  className={isActive(link.href) ? 'active' : ''}
                   onClick={() => {
                     setActive(link.label);
                     closeMenu();
@@ -143,7 +141,7 @@ export default function Navbar() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className={isActive(link.label) ? 'active' : ''}
+                  className={isActive(link.href) ? 'active' : ''}
                   onClick={() => {
                     setActive(link.label);
                     closeMenu();
