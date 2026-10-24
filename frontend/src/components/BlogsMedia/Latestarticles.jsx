@@ -1,4 +1,4 @@
-import '../../css/BlogsMedia/LatestArticles.css';
+import '../../css/BlogsMedia/Latestarticles.css';
 // 👇 apni images ke sahi path daalo
 import healthImg from '../../assets/BlogImages/health-insurance.png';
 import investImg from '../../assets/BlogImages/investment.png';
