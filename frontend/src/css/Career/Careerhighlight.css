@@ -1,0 +1,91 @@
+/* ===== Career highlights ===== */
+.ch {
+  background: #f6f7f9;
+  padding: 36px 24px 52px;
+}
+
+.ch__heading {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.ch__heading span {
+  color: var(--brand-red, #d93a25);
+}
+
+.ch__desc {
+  max-width: 600px;
+  margin: 0 auto 44px;
+  text-align: center;
+  font-size: clamp(13px, 1.1vw, 15px);
+  line-height: 1.5;
+  color: #333;
+}
+
+/* ---------- Cards ---------- */
+.ch__grid {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 52px;
+}
+
+.ch-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 14px 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 2px 0 #cfd9ee;
+  text-align: center;
+}
+
+.ch-card__icon {
+  width: auto;
+  max-width: 100%;
+  height: 112px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.ch-card__title {
+  margin: 0;
+  font-size: clamp(16px, 1.5vw, 19px);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.ch-card__sub {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .ch__grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ch {
+    padding: 28px 16px 40px;
+  }
+  .ch__desc {
+    margin-bottom: 28px;
+  }
+  .ch__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 320px;
+  }
+}

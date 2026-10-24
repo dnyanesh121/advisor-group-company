@@ -1,0 +1,184 @@
+/* ===== Open Positions ===== */
+.op {
+  background: #f6f7f9;
+  padding: 36px 24px 52px;
+}
+
+.op__heading {
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.op__heading span {
+  color: var(--brand-red, #d93a25);
+}
+
+.op__sub {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: clamp(12.5px, 1.05vw, 14px);
+  color: #444;
+}
+
+.op__empty {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ---------- List ---------- */
+.op__list {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ---------- Card ---------- */
+.op-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 34px 22px 34px;
+  background: #fff;
+  border: 1px solid #a9b8dc;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(11, 58, 138, 0.1), 0 2px 0 #c9d4ec;
+}
+
+.op-card__badge {
+  align-self: flex-start;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+  border-radius: 4px;
+  background: #e8effa;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.op-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.op-card__titlerow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+
+.op-card__title {
+  margin: 0;
+  font-size: clamp(17px, 1.7vw, 21px);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.op-card__pill {
+  padding: 3px 14px;
+  border-radius: 3px;
+  background: #eaf0fb;
+  box-shadow: 0 1px 0 #c9d6ef;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--brand-navy, #0b3a8a);
+}
+
+.op-card__dept {
+  margin: 2px 0 8px;
+  font-size: 13.5px;
+  color: #333;
+}
+
+.op-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  margin: 0 0 8px;
+  font-size: 11px;
+  color: #333;
+}
+
+.op-card__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.op-card__meta svg {
+  color: #555;
+}
+
+.op-card__skills {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #e9eaec;
+  box-shadow: 0 1px 0 #cfd2d8;
+  font-size: 9.5px;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* ---------- Apply button ---------- */
+.op-card__btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(130px, 17vw, 142px);
+  height: 38px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--brand-navy, #0b3a8a);
+  box-shadow: 0 3px 6px rgba(11, 58, 138, 0.35);
+  font: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.op-card__btn:hover {
+  filter: brightness(1.18);
+  transform: translateY(-1px);
+}
+
+.op-card__btn:focus-visible {
+  outline: 2px solid var(--brand-red, #d93a25);
+  outline-offset: 3px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .op {
+    padding: 28px 16px 40px;
+  }
+  .op-card {
+    flex-wrap: wrap;
+    padding: 18px 18px 18px;
+  }
+  .op-card__info {
+    flex: 1 1 calc(100% - 50px);
+  }
+  .op-card__btn {
+    width: 100%;
+    margin-top: 6px;
+    font-size: 16px;
+  }
+}
