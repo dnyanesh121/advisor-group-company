@@ -127,7 +127,7 @@
 
 @media (max-width: 900px) {
   .services { padding: 28px 0 40px; }
-  .service-card { flex-basis: 240px; }
+  .service-card { flex-basis: 280px; }
   .service-card__img { height: 170px; }
   .services__arrow { display: none; }
 }
