@@ -5,7 +5,7 @@ import HeroCta from './HeroCta';
  * Reusable static hero (HeroSlider ke same CSS classes use karta hai).
  * Props: image, label (red text), text (navy text)
  */
-export default function PageHero({ image, label, text, id, buttonText, href, newTab }) {
+export default function PageHero({ image, label, text, id, buttonText, href, newTab, overlayClass = "" }) {
   return (
     <section className="hero" id={id}>
       {/* .hero__slide ko slider ke CSS ki wajah se is-active chahiye (warna opacity 0 rahegi) */}
