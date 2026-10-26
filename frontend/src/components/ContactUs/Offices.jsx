@@ -91,10 +91,10 @@ export default function Offices({
               </div>
 
               {address && (
-                <p className="of-card__row">
+                <div className="of-card__row">
                   <span className="of-card__icon"><PinIcon /></span>
                   <address>{address}</address>
-                </p>
+                </div>
               )}
 
               {phone && (

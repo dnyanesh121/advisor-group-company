@@ -18,7 +18,7 @@
 }
 
 .ch__desc {
-  max-width: 600px;
+  max-width: 810px;
   margin: 0 auto 44px;
   text-align: center;
   font-size: clamp(13px, 1.1vw, 15px);
@@ -28,7 +28,7 @@
 
 /* ---------- Cards ---------- */
 .ch__grid {
-  max-width: 760px;
+  max-width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
