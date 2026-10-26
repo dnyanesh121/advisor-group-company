@@ -9,7 +9,7 @@ export default function PageHero({ image, label, text, id, buttonText, href, new
   return (
     <section className="hero" id={id}>
       {/* .hero__slide ko slider ke CSS ki wajah se is-active chahiye (warna opacity 0 rahegi) */}
-      <div className="hero__slide is-active">
+      <div className={`hero__slide is-active ${overlayClass}`}>
         <img className="hero__img" src={image} alt="" />
         <div className="hero__fade" />
         <div className="hero__content">
