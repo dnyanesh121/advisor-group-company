@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import PageHero from "../components/PageHero";
-import ContactImg from "../assets/Contact-us.png";
+import ContactImg from "../assets/BannerImg/Contact-us.png";
 import GetInTouch from "../components/ContactUs/Getintouch";
 import Offices from "../components/ContactUs/Offices";
 import RegulatoryInfo from "../components/ContactUs/RegulatoryInfo";

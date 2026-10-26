@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import PageHero from "../components/PageHero";
-import EventImg from "../assets/EventNews.png"
+import EventImg from "../assets/BannerImg/EventNews.png"
 import Footer from "../components/Footer";
 import CultureGallery from "../components/EventNews/Culturegallery";
 

@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import PageHero from "../components/PageHero";
-import CareerImg from "../assets/Career.png"
+import CareerImg from "../assets/BannerImg/Career.png"
 import CareerHighlights from "../components/Career/Careerhighlight";
 import OpenPositions from "../components/Career/Openposition";
 import Footer from "../components/Footer";
