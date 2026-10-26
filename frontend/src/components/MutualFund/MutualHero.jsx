@@ -1,5 +1,5 @@
 import PageHero from '../PageHero';
-import heroImg from '../../assets/MutualFunds.png';
+import heroImg from '../../assets/BannerImg/MutualFunds.png';
 
 const MutualHero = () => (
  <PageHero

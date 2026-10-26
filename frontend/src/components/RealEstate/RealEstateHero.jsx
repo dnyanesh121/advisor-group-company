@@ -1,5 +1,5 @@
 import PageHero from "../PageHero";
-import heroImg from "../../assets/RealEstate.png";
+import heroImg from "../../assets/BannerImg/RealEstate.png";
 
 const RealEstateHero = () => {
     return(

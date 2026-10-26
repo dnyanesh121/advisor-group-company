@@ -1,5 +1,5 @@
 import PageHero from "../PageHero";
-import heroImg from "../../assets/WebDigital.png"
+import heroImg from "../../assets/BannerImg/WebDigital.png"
 
 const WebHero = () => {
  return (
