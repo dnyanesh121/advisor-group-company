@@ -1,6 +1,6 @@
 import { legend, description } from '../js/Presence';
 import '../css/OurPresence.css';
-import MapImg from  "../assets/MapImg/IndiaMap.png"
+import MapImg from  "../assets/MapImg/india-map.png"
 
 export default function OurPresence() {
   return (
