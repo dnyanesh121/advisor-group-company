@@ -1,5 +1,5 @@
 import ContactUs from "../components/Contactus";
-import FAQ from "../components/Faq";
+import FAQ from "../components/common/Faq";
 import Navbar from "../components/Navbar";
 import DigitalSolutions from "../components/WebDigital/DigitalSolutions";
 import WebHero from "../components/WebDigital/WebHero";

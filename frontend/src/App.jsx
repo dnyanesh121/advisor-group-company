@@ -15,7 +15,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/insurance" element={<Insurance />} />
-      <Route path="/mutual-fund" element={<MutualFund />} />
+      <Route path="/mutual-funds" element={<MutualFund />} />
       <Route path="/loans" element={<Loans />} />
       <Route path='/real-estate' element={<RealEstate />} />
       <Route path='/web-digital' element={<WebDigital />} />

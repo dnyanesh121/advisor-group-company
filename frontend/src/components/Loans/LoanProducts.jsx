@@ -73,10 +73,10 @@ export default function LoanProducts({ loans = LOANS }) {
               <div className="loan-card__body">
                 <h3 className="loan-card__title">{title}</h3>
                 <p className="loan-card__desc">{desc}</p>
-                <div className="loan-card__actions">
+                {/* <div className="loan-card__actions">
                   <a href={applyHref} className="loan-btn loan-btn--solid">Apply Now</a>
                   <a href={moreHref} className="loan-btn loan-btn--outline">View More</a>
-                </div>
+                </div> */}
               </div>
             </article>
           ))}

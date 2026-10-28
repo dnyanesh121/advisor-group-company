@@ -3,7 +3,7 @@ import RealEstateHero from "../components/RealEstate/RealEstateHero"
 import TrustedPartner from "../components/RealEstate/TrustedPartner";
 import estateImg from "../assets/RealEstate/TrustedPartner.png";
 import Offerings from "../components/RealEstate/Offering";
-import FAQ from "../components/Faq";
+import FAQ from "../components/common/Faq";
 import { DISCLAIMER_RealEstate, realestateFaqs } from "../js/Faqdata";
 import ContactUs from "../components/Contactus";
 import Footer from "../components/Footer";

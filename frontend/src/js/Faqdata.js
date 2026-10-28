@@ -4,7 +4,7 @@ export const DISCLAIMER_MF =
   'Mutual fund investments are subject to market risks. Read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. First Advisors is an AMFI-registered mutual fund distributor (ARN-[XXXX]).';
 
 export const DISCLAIMER_INSURANCE =
-  'Insurance is the subject matter of solicitation. For more details on risk factors, terms and conditions, please read the sales brochure carefully before concluding a sale.';
+  'The information provided on the First Advisors Insurance website is for general informational purposes only and does not constitute professional or financial advice. Insurance coverage, premiums, benefits, exclusions, and claim approvals are subject to the terms and conditions of the respective insurance provider. Customers are advised to carefully review policy documents before purchasing. First Advisors Insurance Brokers Pvt. Ltd. does not guarantee claim approval, as all claims are assessed by the respective insurer in accordance with policy terms.';
 
 export const DISCLAIMER_LOANS =
 'Loan approval, interest rates, and repayment terms are subject to the lender’s policies and eligibility criteria. Please read all loan-related terms and conditions carefully before applying. Additional charges may apply as per the lender’s policies..';
@@ -25,10 +25,14 @@ export const mutualFundFaqs = [
 ];
 
 export const insuranceFaqs = [
-  { q: 'What does health insurance cover?', a: 'Apna answer yahan likho.' },
-  { q: 'How do I file a claim?', a: 'Apna answer yahan likho.' },
-  { q: 'What is a waiting period?', a: 'Apna answer yahan likho.' },
+  { q: 'What is insurance, and why do I need it?', a: 'Lorem ipsum is standard dummy or placeholder text used in graphic design, web development, and publishing to preview layouts without distracting readers with real content..' },
+  { q: 'What types of insurance does First Advisors offer?', a: 'Lorem ipsum is standard dummy or placeholder text used in graphic design, web development, and publishing to preview layouts without distracting readers with real content..' },
+  { q: 'How do I choose the right insurance policy?', a: 'Lorem ipsum is standard dummy or placeholder text used in graphic design, web development, and publishing to preview layouts without distracting readers with real content..' },
+  {q: 'How can I buy an insurance policy online?', a: 'Lorem ipsum is standard dummy or placeholder text used in graphic design, web development, and publishing to preview layouts without distracting readers with real content..'},
+  {q: 'What factors affect my insurance premium?', a: 'Lorem ipsum is standard dummy or placeholder text used in graphic design, web development, and publishing to preview layouts without distracting readers with real content..'},
+  {q: 'What documents are required to purchase insurance?', a: 'Lorem ipsum is standard dummy or placeholder text used in graphic design, web development, and publishing to preview layouts without distracting readers with real content..'},
 ];
+
 
 export const loansFaqs = [
   {q: 'What types of loan are available?', a: 'Lorem ipsum is standard dummy or placeholder text used in graphic design, web development.'},

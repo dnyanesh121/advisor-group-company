@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import MutualHero from '../components/MutualFund/MutualHero';
 import MutualFunds from '../components/MutualFund/MutualInvest';
 import ReturnsCalculator from '../components/MutualFund/ReturnsCalculator';
-import FAQ from '../components/Faq';
+import FAQ from '../components/common/Faq';
 import { mutualFundFaqs, DISCLAIMER_MF } from '../js/Faqdata';
 import ContactUs from '../components/Contactus';
 

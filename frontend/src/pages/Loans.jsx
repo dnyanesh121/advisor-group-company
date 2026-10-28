@@ -4,7 +4,7 @@ import LoanHero from "../components/Loans/LoanHero";
 import LoanProducts from "../components/Loans/LoanProducts";
 import Navbar from "../components/Navbar";
 import { DISCLAIMER_LOANS, loansFaqs } from "../js/Faqdata";
-import FAQ from '../components/Faq';
+import FAQ from '../components/common/Faq';
 import ContactUs from "../components/Contactus";
 
 export default function Loans() {

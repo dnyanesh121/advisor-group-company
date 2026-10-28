@@ -3,7 +3,7 @@ import '../../css/RealEstate/Offerings.css';
 import residentialIcon from '../../assets/RealEstate/residential.png';
 import preLeasedIcon from '../../assets/RealEstate/pre-leased.png';
 import officeIcon from '../../assets/RealEstate/office-retail.png';
-import landIcon from '../../assets/RealEstate/residential.png';
+import landIcon from '../../assets/RealEstate/pre-leased.png';
 import industrialIcon from '../../assets/RealEstate/industrial.png';
 import structuredIcon from '../../assets/RealEstate/structured.png';
 

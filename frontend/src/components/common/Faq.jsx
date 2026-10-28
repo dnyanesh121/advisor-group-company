@@ -1,5 +1,5 @@
 import { useId, useState } from 'react';
-import '../css/Faq.css';
+import '../../css/Faq.css';
 
 /**
  * Reusable FAQ accordion.

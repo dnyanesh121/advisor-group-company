@@ -27,9 +27,9 @@ export default function MutualFunds({ funds = FUNDS }) {
                   <span key={line}>{line}</span>
                 ))}
               </h3>
-              <a href={link} className="mf-card__btn">
+              {/* <a href={link} className="mf-card__btn">
                 Invest Now
-              </a>
+              </a> */}
             </div>
             <img src={icon} alt="" className="mf-card__icon" />
           </article>

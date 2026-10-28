@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../css/Contact.css';
 import axios from "axios";
 
-const INTERESTS = ['Health', 'Travel', 'Home', 'Mobility', 'Term', 'Business'];
+const INTERESTS = ['Insurance', 'Mutual Funds', 'Loans', 'Real Estate', 'Web and Digital'];
 
 const INITIAL = { name: '', mobile: '', email: '', interest: '', message: '' };
 
