@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Footer from "../components/common/Footer";
 import EMICalculator from "../components/Loans/EmiCalculator";
 import LoanHero from "../components/Loans/LoanHero";
 import LoanProducts from "../components/Loans/LoanProducts";

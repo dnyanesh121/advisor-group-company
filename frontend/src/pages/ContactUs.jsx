@@ -4,7 +4,7 @@ import ContactImg from "../assets/BannerImg/Contact-us.png";
 import GetInTouch from "../components/ContactUs/Getintouch";
 import Offices from "../components/ContactUs/Offices";
 import RegulatoryInfo from "../components/ContactUs/RegulatoryInfo";
-import Footer from "../components/Footer";
+import Footer from "../components/common/Footer";
 
 export default function ContactUs() {
     return(

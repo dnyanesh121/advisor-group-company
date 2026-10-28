@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
 import slides from '../../js/Slides';
-import '../css/HeroSlider.css';
+import '../../css/CommonCss/HeroSlider.css';
 import HeroCta from './HeroCta';
-import "../css/HeroCta.css"
+import "../../css/CommonCss/HeroCta.css"
 
 const AUTOPLAY_MS = 2000;
 

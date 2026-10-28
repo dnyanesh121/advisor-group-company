@@ -5,7 +5,7 @@ import MissionVision from '../components/MissionVision.jsx';
 import FoundersStory from '../components/FounderStory.jsx';
 import BlogsMedia from '../components/BlogsMedia.jsx';
 import OurPresence from '../components/OurPresence.jsx';
-import Footer from '../components/Footer.jsx';
+import Footer from '../components/common/Footer.jsx';
 
 export default function Home() {
   return (

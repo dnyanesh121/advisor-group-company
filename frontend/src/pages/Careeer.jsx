@@ -3,7 +3,7 @@ import PageHero from "../components/common/PageHero";
 import CareerImg from "../assets/BannerImg/Career.png"
 import CareerHighlights from "../components/Career/Careerhighlight";
 import OpenPositions from "../components/Career/Openposition";
-import Footer from "../components/Footer";
+import Footer from "../components/common/Footer";
 
 export default function Career() {
     return(

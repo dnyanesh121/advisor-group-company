@@ -1,4 +1,4 @@
-import '../css/HeroSlider.css';
+import '../../css/CommonCss/HeroSlider.css';
 import HeroCta from './HeroCta';
 
 /**

@@ -1,4 +1,4 @@
-import '../css/HeroCta.css';
+import '../../css/CommonCss/HeroCta.css';
 
 /**
  * Hero ka red "Explore Now" button (PageHero aur HeroSlider dono mein use hota hai).

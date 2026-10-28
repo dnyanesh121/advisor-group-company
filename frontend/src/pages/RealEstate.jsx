@@ -6,7 +6,7 @@ import Offerings from "../components/RealEstate/Offering";
 import FAQ from "../components/common/Faq";
 import { DISCLAIMER_RealEstate, realestateFaqs } from "../js/Faqdata";
 import ContactUs from "../components/Contactus";
-import Footer from "../components/Footer";
+import Footer from "../components/common/Footer";
 
 export default function RealEstate() {
     return (

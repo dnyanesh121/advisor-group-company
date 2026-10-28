@@ -1,6 +1,6 @@
 import Navbar from '../components/common/Navbar.jsx';
 import InsuranceProducts from '../components/Insurance/InsuranceProducts.jsx';
-import Footer from '../components/Footer.jsx';
+import Footer from '../components/common/Footer.jsx';
 import '../css/Insurance/InsurancePage.css';
 import HeroSlider from '../components/common/HeroSection.jsx';
 import InsuranceHero from '../components/Insurance/InsuranceHero.jsx';

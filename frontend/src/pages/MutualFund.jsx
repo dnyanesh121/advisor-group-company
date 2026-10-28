@@ -1,5 +1,5 @@
 import Navbar from '../components/common/Navbar';
-import Footer from '../components/Footer';
+import Footer from '../components/common/Footer';
 import MutualHero from '../components/MutualFund/MutualHero';
 import MutualFunds from '../components/MutualFund/MutualInvest';
 import ReturnsCalculator from '../components/MutualFund/ReturnsCalculator';

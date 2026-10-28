@@ -5,8 +5,8 @@ import {
   legalLinks,
   contact,
   socials,
-} from '../js/Footer';
-import '../css/Footer.css';
+} from '../../js/Footer';
+import '../../css/CommonCss/Footer.css';
 
 /* ---------- Icons (inline SVG, currentColor = navy) ---------- */
 const Svg = ({ children, size = 16 }) => (
