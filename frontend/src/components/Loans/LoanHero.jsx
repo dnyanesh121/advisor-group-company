@@ -1,4 +1,4 @@
-import PageHero from '../PageHero';
+import PageHero from '../common/PageHero';
 import heroImg from '../../assets/BannerImg/Loan.png';
 
 const LoanHero = () => (

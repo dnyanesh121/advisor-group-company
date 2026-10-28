@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../components/common/Navbar';
 import Footer from '../components/Footer';
 import MutualHero from '../components/MutualFund/MutualHero';
 import MutualFunds from '../components/MutualFund/MutualInvest';

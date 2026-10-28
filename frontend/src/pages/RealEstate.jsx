@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/common/Navbar";
 import RealEstateHero from "../components/RealEstate/RealEstateHero"
 import TrustedPartner from "../components/RealEstate/TrustedPartner";
 import estateImg from "../assets/RealEstate/TrustedPartner.png";

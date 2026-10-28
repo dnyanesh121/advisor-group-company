@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar";
-import PageHero from "../components/PageHero";
+import Navbar from "../components/common/Navbar";
+import PageHero from "../components/common/PageHero";
 import blogMediaImg from "../assets/BlogImages/blog-banner.png"
 import LatestArticles from "../components/BlogsMedia/Latestarticles";
 import Footer from "../components/Footer";

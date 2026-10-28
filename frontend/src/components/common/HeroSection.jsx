@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-import slides from '../js/Slides';
+import slides from '../../js/Slides';
 import '../css/HeroSlider.css';
 import HeroCta from './HeroCta';
 import "../css/HeroCta.css"

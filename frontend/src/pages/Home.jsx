@@ -1,5 +1,5 @@
-import Navbar from '../components/Navbar.jsx';
-import HeroSlider from '../components/HeroSection.jsx';
+import Navbar from '../components/common/Navbar.jsx';
+import HeroSlider from '../components/common/HeroSection.jsx';
 import OurServices from '../components/OurServices.jsx';
 import MissionVision from '../components/MissionVision.jsx';
 import FoundersStory from '../components/FounderStory.jsx';

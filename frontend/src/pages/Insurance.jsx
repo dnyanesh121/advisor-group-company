@@ -1,11 +1,11 @@
-import Navbar from '../components/Navbar.jsx';
+import Navbar from '../components/common/Navbar.jsx';
 import InsuranceProducts from '../components/Insurance/InsuranceProducts.jsx';
 import Footer from '../components/Footer.jsx';
 import '../css/Insurance/InsurancePage.css';
-import HeroSlider from '../components/HeroSection.jsx';
+import HeroSlider from '../components/common/HeroSection.jsx';
 import InsuranceHero from '../components/Insurance/InsuranceHero.jsx';
 import OurPartners from '../components/OurPartners.jsx';
-import FAQ from '../components/Common/common/Faq.jsx';
+import FAQ from '../components/common/Faq.jsx';
 import { DISCLAIMER_INSURANCE, insuranceFaqs } from '../js/Faqdata.js';
 import ContactUs from '../components/Contactus.jsx';
 

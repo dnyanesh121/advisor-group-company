@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import '../css/Navbar.css';
 import logo from '../assets/BannerImg/logonew.png';
-import { BUSINESSES } from '../js/Site';
+import { BUSINESSES } from '../../js/Site';
 import { href, NavLink, useLocation } from 'react-router-dom';
 
 const links = [
