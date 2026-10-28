@@ -26,6 +26,17 @@
   color: #444;
 }
 
+.gt__icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin: 4px 0px 0px 4px;
+}
+.gt__dot {
+  display: none;
+}
+
 /* ---------- Card ---------- */
 .gt__card {
   max-width: 1000px;

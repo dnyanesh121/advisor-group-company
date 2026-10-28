@@ -1,10 +1,13 @@
 import { useId, useState } from 'react';
 import '../../css/ContactUs/Getintouch.css';
+import emailIcon from '../../assets/ContactUs/email.png';
+import phoneIcon from '../../assets/ContactUs/phone.png';
+import sheildIcon from '../../assets/ContactUs/sheild.png';
 
 const INFO_ITEMS = [
-  { text: 'support@firstadvisorsinsurance.com', href: 'mailto:support@firstadvisorsinsurance.com' },
-  { text: '1800-890-9195 (Toll-Free)', href: 'tel:18008909195' },
-  { text: 'IRDAI registered broker — trusted by thousands across India' },
+  { text: 'support@firstadvisorsinsurance.com', href: 'mailto:support@firstadvisorsinsurance.com', icon: emailIcon, },
+  { text: '1800-890-9195 (Toll-Free)', href: 'tel:18008909195',  icon: phoneIcon, },
+  { text: 'IRDAI registered broker — trusted by thousands across India',  icon: sheildIcon, },
 ];
 
 const INITIAL = { name: '', email: '', mobile: '', subject: '', message: '' };
@@ -74,14 +77,24 @@ export default function GetInTouch({
             <p className="gt__panel-text">{panelText}</p>
             <hr className="gt__rule" />
 
-            <ul className="gt__info">
-              {infoItems.map(({ text, href }) => (
-                <li key={text}>
-                  <span className="gt__dot" aria-hidden="true" />
-                  {href ? <a href={href}>{text}</a> : <span>{text}</span>}
-                </li>
-              ))}
-            </ul>
+             <ul className="gt__info">
+            {infoItems.map(({ text, href, icon }) => (
+              <li key={text}>
+                <span style={{width: '20px', height: '20px', borderRadius: '50%', background: '#fff'}}>
+                <img
+                  src={icon}
+                  alt=""
+                  className="gt__icon"
+                />
+                </span>
+                {href ? (
+                  <a href={href}>{text}</a>
+                ) : (
+                  <span style={{width: '200px'}}>{text}</span>
+                )}
+              </li>
+            ))}
+          </ul>
           </div>
         </aside>
 
