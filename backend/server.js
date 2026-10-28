@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const Contact = require("./models/contact");
+const sendSms = require("./sms");
 
 const app = express();
 
@@ -24,7 +25,24 @@ app.post("/api/contact", async (req, res) => {
 
     console.log("DATA RECEIVED:", req.body);
 
-    const contact = await Contact.create(req.body);
+    const { name, mobile, email, interest, subject, message } = req.body;
+
+    if (!name || !/^[0-9]{10}$/.test(mobile || "")) {
+      return res.status(400).json({
+        success: false,
+        message: "Name and valid 10-digit mobile number are required",
+      });
+    }
+
+    const contact = await Contact.create({
+      name, mobile, email, interest, subject, message,
+    });
+
+    // SMS fail ho jaye to bhi form submit successful maana jayega
+    sendSms(
+      mobile,
+      `Hi ${name}, thank you for contacting First Advisors Insurance. Our team will get back to you shortly. For help call 1800-890-9195.`
+    ).catch((err) => console.log(err.message));
 
     res.status(201).json({
       success: true,
