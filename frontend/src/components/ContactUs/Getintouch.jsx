@@ -1,4 +1,5 @@
 import { useId, useState } from 'react';
+import axios from 'axios';
 import '../../css/ContactUs/Getintouch.css';
 import emailIcon from '../../assets/ContactUs/email.png';
 import phoneIcon from '../../assets/ContactUs/phone.png';
@@ -12,6 +13,10 @@ const INFO_ITEMS = [
 
 const INITIAL = { name: '', email: '', mobile: '', subject: '', message: '' };
 
+const API_URL = import.meta.env.VITE_API_URL || 'https://advisor-group-company-1.onrender.com';
+
+const saveContact = (values) => axios.post(`${API_URL}/api/contact`, values);
+
 /**
  * Reusable contact section (left info panel + right form).
  * Props:
@@ -19,7 +24,7 @@ const INITIAL = { name: '', email: '', mobile: '', subject: '', message: '' };
  *  panelTitle, panelText, infoItems [{text, href?}] : left blue panel
  *  formTitle, formHint                            : form ka heading + chhota text
  *  buttonText                                     : default "Send Message"
- *  onSubmit(values) => Promise|void               : form data yahan milega (API call yahan lagao)
+ *  onSubmit(values) => Promise|void               : default: backend /api/contact pe save karta hai
  *  id                                             : section id
  */
 export default function GetInTouch({
@@ -32,12 +37,13 @@ export default function GetInTouch({
   formTitle = 'Send us a message',
   formHint = 'Fill in the form below and we’ll respond promptly.',
   buttonText = 'Send Message',
-  onSubmit,
+  onSubmit = saveContact,
   id,
 }) {
   const uid = useId();
   const [form, setForm] = useState(INITIAL);
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [sentName, setSentName] = useState('');
 
   const handleChange = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -46,8 +52,8 @@ export default function GetInTouch({
     e.preventDefault();
     setStatus('sending');
     try {
-      // 👇 yahan apni API call lagao (ya parent se onSubmit prop pass karo)
-      if (onSubmit) await onSubmit(form);
+      await onSubmit(form);
+      setSentName(form.name.trim());
       setForm(INITIAL);
       setStatus('success');
     } catch {
@@ -142,7 +148,8 @@ export default function GetInTouch({
             </button>
 
             <p className={`gt__status gt__status--${status}`} role="status" aria-live="polite">
-              {status === 'success' && 'Thank you! We’ll get back to you shortly.'}
+              {status === 'success' &&
+                `Thank you${sentName ? `, ${sentName}` : ''} for filling the form! We’ve received your message and sent a confirmation SMS to your mobile. Our team will get back to you shortly.`}
               {status === 'error' && 'Something went wrong. Please try again.'}
             </p>
           </div>
