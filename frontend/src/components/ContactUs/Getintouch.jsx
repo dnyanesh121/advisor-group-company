@@ -88,7 +88,7 @@ export default function GetInTouch({
                 />
                 </span>
                 {href ? (
-                  <a href={href}>{text}</a>
+                  <a href={href} style={{width: '207px'}}>{text}</a>
                 ) : (
                   <span style={{width: '200px'}}>{text}</span>
                 )}

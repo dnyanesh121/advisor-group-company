@@ -25,7 +25,7 @@ const InsuranceProducts = ({ products = PRODUCTS }) => {
 
       <div className="ins-products__grid">
         {products.map(({ title, icon, link }) => (
-          <a key={title} href={link} className="ins-card">
+          <a key={title} className="ins-card">
             <span className="ins-card__title">{title}</span>
             <img src={icon} alt="" className="ins-card__icon" />
             <span className="ins-card__arrow" aria-hidden="true">

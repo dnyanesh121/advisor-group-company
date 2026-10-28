@@ -20,7 +20,7 @@ export default function RealEstate() {
         text="First Advisors helps individuals and investors identify the right real estate opportunities through market insights, strategic property guidance, and investment-focused advisory. From property evaluation and location analysis to investment planning and transaction support, we simplify complex real estate decisions with research-driven insights and a client-first approach."
         image={estateImg}
         buttonText="Talk to an Expert"
-        href="/contact"
+        href="/contact-us"
         />
         <Offerings />
         <FAQ faqs={realestateFaqs} disclaimer={DISCLAIMER_RealEstate} />
