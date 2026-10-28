@@ -1,18 +1,14 @@
 import items from '../js/MissionVision';
 import '../css/MissionVision.css';
+import missionIcon from '../assets/MissonVision/Mission 1.png';
+import visionIcon from '../assets/MissonVision/Vision 1.png';
+import goalIcon from '../assets/MissonVision/Goal 1.png';
 
-function TargetIcon() {
-  return (
-    <svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#fff"
-         strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M40 24a16 16 0 1 1-9-14.4" />
-      <path d="M33 24a9 9 0 1 1-5.5-8.3" />
-      <circle cx="24" cy="24" r="2.5" fill="#fff" stroke="none" />
-      <path d="M25 23l14-14" />
-      <path d="M33 9h6v6" />
-    </svg>
-  );
-}
+const icons = {
+  Mission: missionIcon,
+  Vision: visionIcon,
+  Goal: goalIcon,
+};
 
 export default function MissionVision() {
   return (
@@ -25,7 +21,12 @@ export default function MissionVision() {
         {items.map((item) => (
           <article key={item.id} className="mvv-card">
             <div className={`mvv-card__side mvv-card__side--${item.variant}`}>
-              <TargetIcon />
+              {/* <TargetIcon /> */}
+              <img
+                src={icons[item.title]}
+                alt={item.title}
+                className="mvv-card__icon"
+              />
             </div>
             <div className="mvv-card__body">
               <h3>{item.title}</h3>

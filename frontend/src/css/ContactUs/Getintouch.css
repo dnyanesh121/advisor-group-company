@@ -140,6 +140,12 @@
   background: #fff;
 }
 
+.gt__info li span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
 /* ---------- Form ---------- */
 .gt__form {
   padding: 24px 26px 28px 22px;

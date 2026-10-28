@@ -28,11 +28,11 @@ const InsuranceProducts = ({ products = PRODUCTS }) => {
           <a key={title} className="ins-card">
             <span className="ins-card__title">{title}</span>
             <img src={icon} alt="" className="ins-card__icon" />
-            <span className="ins-card__arrow" aria-hidden="true">
+            {/* <span className="ins-card__arrow" aria-hidden="true">
               <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                 <path d="M2 1l3 3-3 3" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </span>
+            </span> */}
           </a>
         ))}
       </div>
